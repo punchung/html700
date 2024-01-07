@@ -11,64 +11,87 @@
             font-family: 'kanit';
             src: url('./kanit/Kanit-Regular.ttf');
         }
-            body{
-                font-family: "kanit";
-            }
-            #resgister {
-                font-size: 24px;
-                color: navy;
-                font-weight: 800;
-                padding: 10px;
-                margin: 10px;
-                background-color: rgb(252, 229, 116);
-                border: 1px navy solid;
-            }
-            .header-from{
-                font-weight: 800;
-                
-            }
-    
+        body{
+            font-family: "kanit";
+            font-size: 14px;
+        }
+        .container{
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .header{
+            font-size: 30px;
+            text-align: center;
+        }
+        .header-from{
+            width: 200px;
+        }
+        .flex{
+            display: flex;
+        }
+        .from-input{
+            margin-bottom: 10px;
+        }
+        input.from, textarea{
+            border: 1px blueviolet solid;
+            width: 100%;
+        }
+            
     </style>
 
 </head>
 <body>
-    <div id="resgister">Resgister Form</div>
-    <span class="header-from"></span> ชื่อจริง</span>
-    <input class="from" type="text">
-    <span class="header-from"></span> นามสกุล</span> 
-    <input class="from" type="text"><br>
-    <span class="header-from"></span> อายุ</span> 
-    <input class="from" type="number" min="0" max="100">
-<div>
-    เพศ
+<!--แสดงออกทางหน้าจอ-->
+
+<!--from-->
+<div class="container">
+    <div class="header">Resgister Form
+
+    </div>
+    <div class="flex from-input">
+        <div class="header-from">ชื่อจริง</div>
+        <input class="from" type="text">
+    </div>
+
+    <div class="flex from-input">
+        <div class="header-from">นามสกุล</div> 
+        <input class="from" type="text"><br>
+    </div>
+
+    <div class="flex from-input">
+        <div class="header-from">อายุ</div> 
+        <input class="from" type="number" min="0" max="100">
+    </div>
+    
+    <div class="gender">
+        เพศ
+            <div>
+                <input name="gender" type="radio">ชาย
+                <input name="gender" type="radio">หญิง
+                <input name="gender" type="radio">ไม่ระบุ
+            </div>
+    </div>
+    <div>
+        สิ่งที่สนใจ
         <div>
-            <input name="gengder" type="radio">ชาย
+            <input name="internet" type="checkbox">หนังสือ
         </div>
         <div>
-            <input name="gengder" type="radio">หญิง
+            <input name="internet" type="checkbox">วีดีโอเกม
         </div>
         <div>
-            <input name="gengder" type="radio">ไม่ระบุ
+            <input name="internet" type="checkbox">การเมือง
         </div>
+    </div>
+    <div>
+        คำอธิบายตัวตนเพื่อเติม
+        <div>
+            <textarea></textarea>
+        </div>
+    </div>
+    <button>ส่งข้อมูล</button>
 </div>
-<div>
-    สิ่งที่สนใจ
-    <div>
-        <input name="internet" type="checkbox">หนังสือ
-    </div>
-    <div>
-        <input name="internet" type="checkbox">วีดีโอเกม
-    </div>
-    <div>
-        <input name="internet" type="checkbox">การเมือง
-    </div>
-</div>
-<div>
-    คำอธิบายตัวตนเพื่อเติม
-    <div>
-        <textarea></textarea>
-    </div>
-</div>
-<button>ส่งข้อมูล</button>
+    
 </body>
 </html>

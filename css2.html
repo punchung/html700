@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button{
+            background-color: brown;
+            border: 0;
+            padding: 20px;
+        }
+        .button:hover{
+            background-color: blueviolet;
+        }
+        .button:active{
+            background-color: orange;
+        }
+        .button:focus{
+            background-color: red;
+        }
+        .input:focus{
+            background-color: palevioletred;
+        }
+        .container .item:first-child{
+            background-color: rgb(130, 46, 255);
+        }
+        .container .item:nth-child(2){
+            background-color: rgb(85, 236, 108);
+        }
+        .container .item:last-child{
+            background-color: red;
+        }
+
+    </style>
+</head>     
+<body>
+
+<input type="text">
+<button class="button">ปุ่ม</button>
+<div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+</div>
+
+</body>
+</html>

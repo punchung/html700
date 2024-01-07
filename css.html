@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container .item{
+            background-color: rgb(44, 165, 252);
+        }
+        .main-container > .item{
+            background-color: rgb(221, 97, 97);
+            padding: 10px;
+        }
+        .button{
+            border: 0;
+            background-color: rgb(255, 127, 229);
+            padding: 10px;
+        }
+        .button.active{
+            background-color: rgb(255, 225, 90);
+        }
+        .button.danger{
+            background-color: rgb(255, 62, 62);
+        }
+        .item1 + .item2{
+            background-color: blue;
+        }
+        input[type=text]{
+            border: 1px rgb(110, 230, 96) solid;
+            height: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+<!---1. item เป็นลูกของcontainer-->    
+<div class="container">
+    container
+    <div class="item">
+        item
+    </div>
+</div>  
+
+
+<!--2.item เป็นลูกของ container แต่ชั้นเดียว-->
+<div class="main-container">
+    container
+    <div class="item">
+        item
+        <div class="item">
+            item1
+        </div>
+        <div class="item">
+            item2
+        </div>
+        <div class="item">
+            item3
+        </div>
+        <div class="item">
+            item4
+        </div>
+    </div>
+</div>
+
+<!--3.มี class ติดกัน-->
+<button class="button">ปุ่ม</button>
+<button class="button active">ปุ่ม</button>
+<button class="active">ปุ่ม</button>
+<button class="button danger">ปุ่ม</button>
+
+<!--4.acjancent-->
+<div class="item1">item1</div>
+<div class="item2">item2</div>
+
+<!--5.actribute selecter-->
+<input type="text" name="fistname">
+<input type="text" name="lastname">
+<input type="text" name="description">
+
+</body>
+</html>
