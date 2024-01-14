@@ -4,12 +4,16 @@
 //const idcard = '1234567890123'; //ค่าไอดีการ์ดคือ เป็นstring ม่สามารถเปลี่ยนแปลงค่าได้ อัปเดตค่าไม่ได้
 //console.log("My name is : " , firstname);
 
+//prompt("Enter your name"); //รับค่าจากผู้ใช้
+
 //2.number
 //let number = 20;
 //let height = 170.5;
 
 //3.boolean true/false
 //let isHandsome = true;
+
+
 
 //firstname = 'Tom';
 
@@ -181,7 +185,7 @@ let score1 = 50
 let score2 = 60
 
 //ประกาศ function ,arrow function
-/*function calculation_grade (score) { //function
+function calculation_grade (score) { //function
     if (score >=80){
         grade = "A";
     }else if(score >=70){
@@ -195,8 +199,8 @@ let score2 = 60
     }
     return grade;
 }
-
-let calculation_grade = (score) => { //arrow function
+*/
+/*let calculation_grade = (score) => { //arrow function
     if (score >=80){
         grade = "A";
     }else if(score >=70){
@@ -217,38 +221,41 @@ let grade1 = calculation_grade(score1)
 let grade2 = calculation_grade(score2)
 console.log('score1 = '+ grade1)
 console.log('score2 = '+ grade2) 
-*/
+
 
 //-------------------------------------------//
 //array
 
-/*let score = [10 ,20 ,30 ,40];
+
 
 for (let index = 0; index<score.length ;index++){ //วนลูปเพื่อแสดงข้อมูลในarray
     console.log("Score :" ,score[index]);
 }
 
-
+let score = [10 ,20 ,30 ,40];
 score.forEach((s) => {
 console.log("Score :" ,s)
 })
 
+
 //map,filter
 
-score[0] =score[0]*2
-score[1] =score[1]*2
-score[2] =score[2]*2
-score[3] =score[3]*2
+//score[0] =score[0]*2
+//score[1] =score[1]*2
+//score[2] =score[2]*2
+//score[3] =score[3]*2
+
 
 score = score.map((s) => {
     return s*2
 })
 
-score.forEach((s) => {
+score.forEach((s) => { //การวนloopในarray
     console.log("New Score :" ,s)
     })
 */
 
+//map คือ การแปลงข้อมูลใน array
 
 //ใช้filter คือ การกรองข้อมูล
 /*let score = [10 ,20 ,30 ,40];
@@ -276,7 +283,8 @@ console.log("newscore:" ,newScore);
 */
 
 //-------------------------------------------//
-//object
+//object คือ ตัวแปรที่สามารถเก็บข้อมูลได้หลายๆค่า และมีค่าเป็นชื่อได้
+//find คือ การหาข้อมูลใน object
 
 let stu = [
     {name : 'Aa',score : 90,grade : 'A'}
@@ -284,6 +292,7 @@ let stu = [
     ,{name : 'Cc',score : 70,grade : 'C'}
 ]
 
+//find คือ การหาข้อมูลใน object
 let stu3 = stu.find((s) => {
     if(s.name == 'Bb') {
         return true
@@ -297,4 +306,4 @@ let heightscore_student = stu.filter((s) => {
 })
 
 console.log("Student" ,stu3)
-console.log("Student" ,heightscore_student)
+console.log("Student" ,heightscore_student)  

@@ -1,0 +1,175 @@
+<!DOCTYPE html> <!--ประกาศว่าเป็น html5-->
+<html lang="en"> <!--ภาษาอังกฤษ-->
+<head> 
+    <meta charset="UTF-8"> <!--กำหนดภาษา-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--กำหนดขนาดหน้าจอ-->
+    <title>Document</title> <!--กำหนดชื่อหน้าเว็บ-->
+<style>
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+    ul {
+    list-style-type:circle; /* ลิสต์แบบวงกลม none ไม่มีลิสต์ */
+    }
+    iframe{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    div{
+        text-align: center;
+        background-color: green;
+    }
+    a{
+        text-decoration: none;
+        background-color: royalblue;
+    }
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        color: white;
+        display: inline-block;
+        margin: 10px;
+    }
+    id{
+        background-color: rgb(158, 60, 60);
+    
+    }
+    nav{
+        background-color: rgb(131, 255, 180);
+        padding: 10px;
+        margin: 10px;
+    }
+
+</style>
+
+</head>
+<body> 
+<!--Heading-->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+ 
+
+<!--Paragrah  ข้อความ-->
+    <p>Paragraph</p>
+
+<!-- การคอมเม้นกดctrl และ? -->
+<!-- ข้อความเป็นตัวหนา -->
+<b>bold</b>
+<br> <!-- ขึ้นบรรทัดใหม่ -->
+<!-- ข้อความเป็นตัวเอียง -->
+<i>italic</i>
+<em>emphasized</em> <!-- ข้อความเน้น -->
+<mark>marked</mark> <!-- ข้อความเน้น -->
+<small>small</small> <!-- ขนาดตัวอักษรเล็กลง -->
+<br>
+<del>deleted</del> <!-- ข้อความที่ถูกลบ -->
+<ins>inserted</ins> <!-- ข้อความที่ถูกเพิ่มเข้ามา -->
+<br>
+<br
+<sub>subscript</sub> <!-- ข้อความที่อยู่ใต้ตัวหนังสือ -->
+<sup>superscript</sup> <!-- ข้อความที่อยู่บนตัวหนังสือ -->
+<!-- -------------------------------------------------- -->
+<br
+<!--รูปภาพ -->
+<img src="https://pbs.twimg.com/media/GBZXtPyXMAI6gsG?format=jpg&name=4096x4096" width="50%" height="50%"> <!-- รูปภาพ -->
+<!-- ลิ้งค์ไปยังเว็บไซต์อื่น target_blank ลิ้งให้ไปแท็ปใหม่-->
+<a href="https://youtu.be/JZjAg6fK-BQ?si=bRZ2IOckvI000mY6" target="_blank">Youtube</a> 
+<video src="https://youtu.be/JZjAg6fK-BQ?si=bRZ2IOckvI000mY6" width="50%" height="50%" controls></video> <!-- วิดีโอ -->
+
+<!-- ฝังยูทธ -->
+<br>
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OJeuyJfxw10?si=LlIDHscgcirn2OsW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<table>
+    <tr> <!-- แถว -->
+        <th>Firstname</th> <!-- หัวตาราง -->
+        <th>Lastname</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Mark</td>  <!-- คอลัม -->
+        <td>Lee</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+    </tr>
+</table>
+ิ<br>
+<br>
+<ul> <!-- ลิสต์แบบไม่มีลำดับ -->
+    <li>HTML</li> <!-- รายการ -->
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+<ol> <!-- ลิสต์แบบมีลำดับ 123 -->
+    <li>Hello</li> <!-- รายการ -->
+    <li>case</li>
+    <li>Janame</li>
+<br>
+    <form> <!-- ฟอร์ม -->
+        <fieldset> <!-- กล่อง -->
+            <legend>Personalia:</legend>
+            <label for="Firstname :">Firstname</label>
+            <input type="text" id="fname" name="fname" 
+            placeholder="Enter your fistname">
+            <label for="Lastname :">Lastname</label>
+            <input type="text" id="lname" name="lname" 
+            placeholder="Enter your lastname">
+            <br><br>
+
+            <label for="gender :">gender</label>
+            <br>
+            <input type="radio" name="gender" value="male" checked>male
+            <input type="radio" name="gender" value="female">female
+
+            <br>
+            <input type="checkbox" value="value1" name="value1">
+            <input type="checkbox" value="value1" name="value1">
+            <br>
+            <input type="submit" value="Submit">
+
+        </fieldset>
+    </form>
+<br>
+<br>
+<div>
+    This a bolck
+</div>
+
+<a>googogogogo</a>
+<a>googogogogo</a>
+<a>googogogogo</a>
+<br>
+<br>
+
+<div class="box">
+    <h2>Box 1</h2>
+    <p>Hello mark</p>
+</div>
+<div class="box">
+    <h2>Box 2</h2>
+    <p>Hello mark</p>
+</div>
+<div class="box">
+    <h2>Box 3</h2>
+    <p>Hello mark lee</p>
+</div>
+<br>
+<nav> <!-- แถบเมนู -->
+    <a>Home</a>
+    <a>About</a>
+    <a>Contact</a>
+</nav>
+<br>
+
+</body>
+</html>

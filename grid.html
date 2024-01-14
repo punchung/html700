@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resgister</title>
+
+    <style>
+            /*สิ่งที่อยู่ตรงนี้มีไว้แค่ให้ dev อ่าน*/
+        @font-face {
+            font-family: 'kanit';
+            src: url('./kanit/Kanit-Regular.ttf');
+        }
+            body{
+                font-family: "kanit";
+            }
+            #resgister {
+                font-size: 24px;
+                color: navy;
+                font-weight: 800;
+                padding: 10px;
+                margin: 10px;
+                background-color: rgb(252, 229, 116);
+                border: 1px navy solid;
+            }
+            .header-from{
+                font-weight: 800;
+            }
+
+            .gender{
+                display: flex;
+                flex-direction: row-reverse;
+            }
+
+            .container{
+                display: flex;
+            }
+            .item-lift{
+                background-color: rgb(255, 88, 88);
+                flex: 1px;
+            }
+            .item-right{
+                background-color: rgb(101, 101, 255);
+                flex: 2px;
+            }
+            .grid-container{
+                display: grid;
+                grid-template-columns: 1fr 2fr ;
+            }
+            .item-1 , .item-3{
+                background-color: rgb(255, 111, 195);
+            }
+    
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <div class="item-lift">Left</div>
+    <div class="item-right">Right</div>
+</div>
+
+<div class="grid-container">
+    <div class="grid-item item-1">item 1</div>
+    <div class="grid-item item-2">item 2</div>
+    <div class="grid-item item-3">item 3</div>
+    <div class="grid-item item-4">item 4</div>
+
+</div>
+
+    <div id="resgister">Resgister Form</div>
+    <span class="header-from"></span> ชื่อจริง</span>
+    <input class="from" type="text">
+    <span class="header-from"></span> นามสกุล</span> 
+    <input class="from" type="text"><br>
+    <span class="header-from"></span> อายุ</span> 
+    <input class="from" type="number" min="0" max="100">
+<div class="gender">
+    เพศ
+        <div>
+            <input name="gender" type="radio">ชาย
+        </div>
+        <div>
+            <input name="gender" type="radio">หญิง
+        </div>
+        <div>
+            <input name="gender" type="radio">ไม่ระบุ
+        </div>
+</div>
+<div>
+    สิ่งที่สนใจ
+    <div>
+        <input name="internet" type="checkbox">หนังสือ
+    </div>
+    <div>
+        <input name="internet" type="checkbox">วีดีโอเกม
+    </div>
+    <div>
+        <input name="internet" type="checkbox">การเมือง
+    </div>
+</div>
+<div>
+    คำอธิบายตัวตนเพื่อเติม
+    <div>
+        <textarea></textarea>
+    </div>
+</div>
+<button>ส่งข้อมูล</button>
+</body>
+</html>

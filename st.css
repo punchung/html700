@@ -1,0 +1,23 @@
+ div{  /* seceter */
+    width: 300px;
+    height: 300px;
+    border: 3px solid green;
+    background : rgb(0, 0, 0);
+    margin-top: 10px; /* ระยะห่างของ div จากด้านบน*/
+    margin-left: 50px; /* ระยะห่างของ div จากด้านซ้าย*/
+    margin-right: 50px;   /* ระยะห่างของ div จากด้านขวา*/
+    margin-bottom: 50px; /*ระยะห่างของ div จากด้านล่าง*/
+
+    padding-top: 10px; /* ระยะห่างของข้อความจากด้านบน*/
+    padding-left: 10px; /* ระยะห่างของข้อความจากด้านซ้าย*/
+    padding-right: 10px; /* ระยะห่างของข้อความจากด้านขวา*/
+    padding-bottom: 10px; /* ระยะห่างของข้อความจากด้านล่าง*/
+
+    
+}
+
+@font-face {
+    font-family: kanit;
+    src: url(kanit/Kanit-Regular.ttf);
+}
+
