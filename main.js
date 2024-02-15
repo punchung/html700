@@ -297,13 +297,13 @@ let stu3 = stu.find((s) => {
     if(s.name == 'Bb') {
         return true
     }
-})
+});
 
 let heightscore_student = stu.filter((s) => {
     if(s.score >= 80){
         return true
     }
-})
+});
 
 console.log("Student" ,stu3)
 console.log("Student" ,heightscore_student)  

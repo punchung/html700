@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* psudo class */
+        /* ใช้เพื่อเปลี่ยนสีตัวอักษร */
         .test{
             color: blue;
         }
         .test::first-letter{
-            font-size: 40px;
+            font-size: 60px;
         }
-        .test::before{
-           content: "?";
+        .test::before{ 
+           content: "??????";
         }
+        /*psudo element*/
+        /*ใช้แทนคำที่ไม่มีใน htmlหรือแทนข้อความ*/
         .test::after{
            content: "?";
         }
