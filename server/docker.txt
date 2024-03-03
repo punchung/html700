@@ -1,0 +1,30 @@
+docker run nginx
+
+docker ps --all
+docker stop contaner id 
+docker rm con id
+
+docker run con or name
+
+docker run --name mrnginx -d -p 8888:80 nginx
+
+docker pull mysql:5.7
+docker pull phpmyadmin/phpmyadmin
+
+docker network create web
+
+docker network ls
+
+docker run --name --network web 
+
+docker run --name mysql --network web -e MYSQL_ROOT_PASSWORD=1111 -e MYSQL_DATABASE=web_db -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=wordpress -d mysql:5.7
+
+docker run --name pma --network web -p 8888:80 -e PMA_ARBITRARY=1 -d phpmyadmin/phpmyadmin
+
+
+รันไฟล์docker อาจาร
+docker-compose up
+docker-compose down
+
+รันไฟล์ index
+npx nodemon index.js 
