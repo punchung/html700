@@ -28,3 +28,7 @@ docker-compose down
 
 รันไฟล์ index
 npx nodemon index.js 
+
+async await  
+
+
