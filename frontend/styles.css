@@ -54,6 +54,24 @@ textarea {
   color: white;
 }
 
+.message {
+  background-color: rgb(121, 117, 117);
+  padding: 10px;
+  margin-bottom: 10px;
+  display: none;
+
+}
+
+.message.success {
+  background-color: rgb(91, 213, 91);
+  display: block;
+}
+
+.message.danger {
+  background-color: rgb(243, 93, 93);
+  display: block;
+}
+
 @media screen and (max-width: 768px){
   .flex {
     flex-direction: column;

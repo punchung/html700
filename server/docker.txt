@@ -31,4 +31,6 @@ npx nodemon index.js
 
 async await  
 
+wsl --update ตรงwindows powershall //ถ้า docker ใช้งานไม่ได้ 
+
 
