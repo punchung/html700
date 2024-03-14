@@ -8,7 +8,7 @@ window.onload = async() => {
     const id = urlParams.get('id')
     if(id){
         mode = 'EDIT'
-        selectedId = id 
+        let selectedId = id 
 
         //1.ดึงข้อมูลuser เก่าออกมาก่อน
         try{
@@ -29,8 +29,8 @@ window.onload = async() => {
         let genderDom = document.querySelectorAll('input[name=gender]') 
         let interestDoms = document.querySelectorAll('input[name=interest]')
         
-        for (let i = 0; i < genderDom.length; i++){
-            if(genderDom[i].value == user.gender){
+        for (let i = 0; i <genderDom.length; i++){
+            if (genderDom[i].value == user.gender){
                 genderDom[i].checked = true
             }
         }
@@ -41,9 +41,13 @@ window.onload = async() => {
             }
         }
         
+
+
         }catch(error){
             console.error('error',error)
+
         }
+        
     }
 }
 
@@ -94,7 +98,9 @@ const submitData = async () => {
             }
 
         }
+
         console.log('test')
+        
         let userData = {
             firstname : firstnameDom.value,
             lastname : lastnameDom.value,
@@ -103,7 +109,9 @@ const submitData = async () => {
             description : descriptionDom.value,
             interests : interest
         }
+
         console.log('submitData',userData);
+        
         const errors = validateData(userData)
 
         if(errors.length > 0){
@@ -116,42 +124,41 @@ const submitData = async () => {
 
         let message = 'บันทึกข้อมูลเรียบร้อยแล้ว'
 
-        if(mode == 'CREATE'){ //เพิ่มข้อมูล
+        if(mode == 'CREATE'){
             const response = await axios.post(`${BASE_URL}/users`, userData)
             console.log('response', response.data)
-        }else { //แก้ไขข้อมูล
+        }else {
             const response = await axios.put(`${BASE_URL}/users/${selectedId}`, userData)
             message = 'แก้ไขข้อมูลเรียบร้อยแล้ว'
             console.log('response', response.data)
         }
-        
-        /*const response = await axios.post(`${BASE_URL}/users`, userData)
-        console.log('response', response.data)*/ //post ข้อมูลไปที่ server
-        
+      
+        const response = await axios.post(`${BASE_URL}/users`, userData)
+        console.log('response', response.data)
         messageDom.innerText = message
         messageDom.className = 'message success'
-
-    }catch(error){
-        console.log('error message', error.message)
-        console.log('error ', error.errors)
         
-        if (error.response) {
+        }catch(error){
+            console.log('error message',error.message)
+            console.log('error',error.errors)
+            
+            if (error.response) {
             console.log(error.response)
             error.message = error.response.data.message
             error.errors = error.response.data.errors
-        }
+           }
 
-        let htmlData = '<div>';
-        htmlData += `<div>${error.message}</div>`; // แก้ให้เป็น backticks
-        htmlData += '<ul>';
-        for(let i = 0; i < error.errors.length; i++){
-            htmlData += `<li>${error.errors[i]}</li>`; // แก้ให้เป็น backticks
+        let htmlData = '<div>'
+        htmlData += `<div>${error.message}</div>`
+        for (let i = 0; i < error.errors.length; i++){
+            htmlData += `<li>${error.errors[i]}</li>`
         }
-        htmlData += '</ul>';
-        htmlData += '</div>';
+        htmlData += '</ul>'
+        htmlData += '</div>'
 
-        messageDom.innerHTML = htmlData;
-        messageDom.className = 'message danger';
+
+        messageDom.innerHTML = htmlData
+        messageDom.className = 'message danger'
     }
 
 }
