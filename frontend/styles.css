@@ -7,6 +7,16 @@
 
 body {
   font-family: "kanit";
+  background-color: #FCFCFD;
+  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/f8fd7f15305681.5628f54b9c592.jpg);
+  background-size: cover; /* ปรับขนาดภาพให้เต็มหน้าจอ */
+  background-position: center;
+  background-attachment: fixed; /* ไม่ให้ภาพเลื่อนไปตาม scroll */
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0;
+
 }
 
 .container {
@@ -14,9 +24,35 @@ body {
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
-  background-color: azure;
+  margin-top: 45px;
+  margin-bottom: 45px;
   padding: 20px;
   box-sizing: border-box;
+  border-radius: 20px; /* ให้มุมมนรัศมี 10px */
+  border : 8px solid transparent;
+  background: rgba(255, 255, 255, 0.5); /* ให้มีสี */
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.3); /* ให้มีเงา */
+}
+
+.menu {
+  display: flex;
+  position: sticky;
+  top: 0; /* ความสูงที่ต้องการให้แถบค้าง โดยจะค้างที่ด้านบนของหน้าเว็บ */
+  z-index: 1000; /* ให้แถบอยู่ข้างหน้า */
+  justify-content: start; /* จัดตำแหน่งเริ่มต้นของ flex ที่เป็น row */
+  background: rgba(255, 255, 255, 0.5); /* ให้มีสี */
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.3); /* ให้มีเงา */
+  padding: 12px;
+  margin: 0;
+}
+
+.menu a {
+  color: #333333;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none; /* ลบขีดเส้นใต้ข้อความ */
+  text-indent: 10px; /* เลื่อนตัวอักษรไปทางขวา 20 พิกเซล */
+  margin: 0px;
 }
 
 .header {
@@ -34,6 +70,13 @@ body {
 
 .form-input {
   margin-bottom: 10px;
+  color: #333333;
+}
+
+.form-input a {
+  text-decoration: none;
+  color:#333333;
+  font-weight: bold;
 }
 
 .center {
@@ -42,15 +85,21 @@ body {
 
 input.form,
 textarea {
-  border: 1px gainsboro solid;
+  border: 1px #675088 solid;
+  color: #333333;
   width: 100%;
+  font-family: "kanit";
+  font-size: 14px;
 }
 
 .button {
   border: 0;
   width: 50%;
   height: 40px;
-  background-color: #2962ff;
+  background-color: #675088;
+  border-radius: 5px;
+  font-family: "kanit";
+  font-size: 16px;
   color: white;
 }
 
@@ -64,12 +113,38 @@ textarea {
 
 .message.success {
   background-color: rgb(91, 213, 91);
+  
   display: block;
 }
 
 .message.danger {
-  background-color: rgb(243, 93, 93);
+  background-color: #ef5252;
   display: block;
+}
+
+.userdata {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  padding: 5px;
+}
+
+.edit {
+  color: #4040f2;
+  padding: 5px 10px ;
+  border-radius: 5px;
+  margin: 5px ;
+  text-decoration: none; /* ลบขีดเส้นใต้ข้อความ */
+  font-weight: bold;
+}
+
+.delete {
+  color: #ef5252;
+  padding: 5px 10px ;
+  border-radius: 5px;
+  margin: 5px ;
+  text-decoration: none;  /* ลบขีดเส้นใต้ข้อความ */
+  font-weight: bold;
 }
 
 @media screen and (max-width: 768px){
@@ -83,3 +158,18 @@ textarea {
     width: 100%;
   }
 }
+
+/*@media screen and (max-width: 768px){
+  .box-button{
+    width: 60%;
+    column-gap: 50px;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .box-button{
+    width: 35%;
+    column-gap: 50px;
+  }
+}*/
+

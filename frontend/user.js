@@ -1,5 +1,6 @@
 const BASE_URL = 'http://localhost:8000'
 
+
 window.onload = async() => {
    await loadData()
 }
@@ -14,14 +15,18 @@ const userDOM = document.getElementById('user')
 let htmlData = '<div>'
 for (let i = 0; i < response.data.length; i++) {
     let user = response.data[i]
-    htmlData += `<div>
+    htmlData += `<div class='userdata'>
     ${user.id} ${user.firstname} ${user.lastname}
-    <a href=index.html?id=${user.id}><button>Edit</button></a>
+    <a href=index.html?id=${user.id}>
+    <button class='edit'>Edit</button></a>
     <button class='delete' data-id='${user.id}'>Delete</button>
-    </div>`
+</div>`
+
+
 }
 htmlData += '</div>'
 userDOM.innerHTML = htmlData
+
 
 const deleteDOMs = document.getElementsByClassName('delete')
  for (let i=0; i<deleteDOMs.length; i++){
